@@ -16,7 +16,9 @@
   <%# <hr> %>
 
   <h5 class="mt-5">Reviews</h5>
-  <% if !@restaurant.reviews.empty? %>
+  <% if @restaurant.reviews.empty? %>
+    <p class="mt-4">There are currently no reviews!</p>
+  <% else %>
     <div class="row overflow-auto flex-nowrap ">
       <% @restaurant.reviews.each do |review| %>
         <div class="card col-3 m-3">
@@ -39,8 +41,6 @@
         </div>
       <% end %>
     </div>
-  <% else %>
-    <p class="mt-4">There are currently no reviews!</p>
   <% end %>
 
 
