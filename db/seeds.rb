@@ -18,6 +18,15 @@ AMOUNT.times do
   )
   restaurant.save!
   puts "created #{restaurant.category} restaurant '#{restaurant.name}' at id #{restaurant.id}"
+
+  5.times do
+    review = Review.new(
+      content: Faker::Lorem.sentence(word_count: 15),
+      rating: (0..5).to_a.sample,
+      restaurant_id: restaurant.id
+    )
+    review.save!
+  end
 end
 
 puts 'Done!'
