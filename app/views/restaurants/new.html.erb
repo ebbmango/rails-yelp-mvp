@@ -1,0 +1,13 @@
+
+
+<div class="text-center">
+  <div class="card mt-5 w-50" style="margin: 0 auto;">
+    <div class="card-header">
+      Creating new restaurant
+    </div>
+    <div class="card-body">
+      <%= render 'restaurant_form', restaurant: @restaurant %>
+    </div>
+  </div>
+  <%= link_to 'Back to index', restaurants_path, class: 'btn btn-primary mt-5' %>
+</div>

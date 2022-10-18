@@ -1,0 +1,15 @@
+<div class="text-center">
+  <div class="card mt-5 w-50" style="margin: 0 auto;">
+    <div class="card-header text-start">
+      <%= @restaurant.category.capitalize %> Food
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= @restaurant.name %></h5>
+      <p class="card-text"><%= @restaurant.address %></p>
+      <%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant.id), class: 'btn btn-sm text-secondary' %>
+      <a href="#" class="btn btn-sm text-primary">Write a review</a>
+      <%= link_to "Delete restaurant", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-sm text-danger'%>
+    </div>
+  </div>
+  <%= link_to 'Back to index', restaurants_path, class: 'btn btn-primary mt-5' %>
+</div>

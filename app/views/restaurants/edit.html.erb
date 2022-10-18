@@ -1,0 +1,11 @@
+<div class="text-center">
+  <div class="card mt-5 w-50" style="margin: 0 auto;">
+    <div class="card-header">
+      Currently editing <strong><%= @restaurant.name %></strong>
+    </div>
+    <div class="card-body">
+      <%= render 'restaurant_form', restaurant: @restaurant %>
+    </div>
+  </div>
+  <%= link_to 'Back to details', restaurant_path(@restaurant.id), class: 'btn btn-primary mt-5' %>
+</div>
